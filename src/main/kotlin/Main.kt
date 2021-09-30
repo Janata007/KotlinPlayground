@@ -7,6 +7,7 @@ fun main(args: Array<String>) {
     println("Rectangle perimeter is ${rectangle.perimeter}")
     println("Max is: ${maxOf(1, 2)}")
     listItems(items)
+    whenFunction(2)
 }
 
 class Rectangle(var height: Double, var length: Double) {
@@ -21,8 +22,16 @@ fun listItems(l: List<String>) {
     for (index in items.indices) {
         println("For loop: Item at $index is ${l[index]}")
     }
-    while(indeks < items.size){
+    loop@ while(indeks < items.size){
+        if(indeks == 2) break@loop
         println("While loop: item at $indeks is ${items[indeks]}")
         indeks++
     }
+}
+fun whenFunction( x : Int){
+when (x){
+    in 1..10 -> println("x is in the range")
+    !in 10..20 -> println("x is out of range")
+    else -> ("none of the above")
+}
 }
