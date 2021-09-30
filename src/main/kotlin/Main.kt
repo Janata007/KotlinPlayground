@@ -8,10 +8,9 @@ fun main(args: Array<String>) {
     println("Max is: ${maxOf(1, 2)}")
     listItems(items)
     whenFunction(2)
-}
+    var woman = Woman("jana")
+    woman.printInfo()
 
-class Rectangle(var height: Double, var length: Double) {
-    var perimeter = (height + length) * 2
 }
 
 fun maxOf(a: Int, b: Int) = if (a > b) a else b
