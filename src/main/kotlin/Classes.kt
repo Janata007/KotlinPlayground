@@ -12,7 +12,6 @@ open class Person(
     }
 
 }
-
 class Woman : Person {
     constructor(firstname: String) : super(firstname)
     override var gender = "female"
@@ -20,3 +19,13 @@ class Woman : Person {
         println("Woman override function: ${firstname}, ${surname}, ${age}, ${gender}")
     }
 }
+
+public class MyTest{
+    lateinit var subject: String
+     fun setup(){
+        subject = "Math"
+    }
+
+}
+
+data class User(val name: String, val age: Int)

@@ -10,8 +10,24 @@ fun main(args: Array<String>) {
     whenFunction(2)
     var woman = Woman("jana")
     woman.printInfo()
+    var test = MyTest()
+    //println("Test subject is ${test.subject}") //throws not initialized
+    test.setup()
+    println(test.subject)
 
-}
+    //class implementing interface
+    var employee = Employee("jana", "markovic")
+    print(employee.firstname)
+
+    //FUNCTION EXTENTIONS
+    val list = mutableListOf(1, 2, 3)
+    println("OG list: ${list}")
+    list.swap(0, 2)
+    println("Swapped list: ${list}")
+
+
+
+} // end of main
 
 fun maxOf(a: Int, b: Int) = if (a > b) a else b
 val items = listOf("predmet1", "predmet2", "predmet3")
@@ -33,4 +49,9 @@ when (x){
     !in 10..20 -> println("x is out of range")
     else -> ("none of the above")
 }
+}
+fun <T> MutableList<T>.swap(index1 : Int, index2: Int){
+    val tmp = this[index1]
+    this[index1] = this[index2]
+    this[index2] = tmp
 }
