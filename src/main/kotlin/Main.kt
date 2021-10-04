@@ -25,6 +25,10 @@ fun main(args: Array<String>) {
     list.swap(0, 2)
     println("Swapped list: ${list}")
 
+    //VARARG
+    var lisst = asList(1, 2, 3,4)
+    print(lisst)
+
 
 
 } // end of main
