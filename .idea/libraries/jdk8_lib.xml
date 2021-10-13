@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="jdk8_lib">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../jdk1.8.0_301/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../jdk1.8.0_301/lib" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../jdk1.8.0_301/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../jdk1.8.0_301/lib" recursive="false" type="SOURCES" />
+  </library>
+</component>
