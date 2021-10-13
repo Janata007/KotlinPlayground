@@ -1,17 +1,28 @@
 package com.example.demo.view
 
 import com.example.demo.app.Styles
+import com.example.demo.controller.MyController
+import javafx.beans.property.SimpleStringProperty
 import javafx.geometry.Pos
 import tornadofx.*
 
 class BottomView : View("My View") {
-    override val root = vbox{
-        alignment =  Pos.CENTER
+    val controller : MyController by inject()
+val input = SimpleStringProperty()
 
-        label(){
-            text = "Bottom View"
-            addClass(Styles.heading)
-        }
+    override val root = form{
+        alignment =  Pos.CENTER
+       fieldset {
+           field("Input"){
+               textfield(input)
+           }
+           button("Commit"){
+               action{
+                   controller.writeToDb(input.value)
+                   input.value=""
+               }
+           }
+       }
 
     }
 }
