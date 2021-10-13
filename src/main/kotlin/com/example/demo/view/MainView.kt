@@ -6,41 +6,10 @@ import javafx.geometry.Pos
 import tornadofx.*
 
 class MainView : View("TornadoFX App") {
+private val topView = find(TopView::class)
 
     override val root = borderpane {
-        top<TopView>()
+        top = topView.root
         bottom<BottomView>()
-    }
-}
-
-class TopView: View(){
-    override val root =  vbox {
-        alignment = Pos.CENTER
-        spacing = 10.0
-        val labelText = SimpleStringProperty()
-
-        label(labelText) {
-            bind(labelText)
-            addClass(Styles.heading)
-        }
-
-        button {
-            this.text = "Click"
-            action {
-                labelText.set("Hello")
-            }
-        }
-
-    }
-}
-class BottomView: View(){
-    override val root = vbox{
-        alignment =  Pos.CENTER
-
-        label(){
-            text = "Bottom View"
-            addClass(Styles.heading)
-        }
-
     }
 }
