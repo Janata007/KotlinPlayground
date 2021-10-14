@@ -47,6 +47,13 @@ class CenterView : View("My View") {
             children.asSequence()
                 .filter { it is Button }
                 .forEach { it.addClass(MyStyle.tackyButton)}
+
+            piechart("Passed exams x/10"){
+                setMinSize(70.0, 70.0)
+                data("Alpha", 70.0)
+                data("Gamma", 25.0)
+                data("Delta", 05.0)
+            }
         }
     }
 }
