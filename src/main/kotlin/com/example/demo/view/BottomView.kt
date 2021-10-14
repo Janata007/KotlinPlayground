@@ -18,7 +18,9 @@ val input = SimpleStringProperty()
            }
            button("Commit"){
                action{
-                   controller.writeToDb(input.value)
+
+                       controller.writeToDb(input.value)
+
                    input.value=""
                }
            }

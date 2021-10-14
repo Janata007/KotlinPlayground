@@ -3,10 +3,11 @@ package com.example.demo.view
 import com.example.demo.app.Styles
 import javafx.beans.property.SimpleStringProperty
 import javafx.geometry.Pos
+import javafx.scene.Parent
 import tornadofx.*
 
-class TopView : View("My View") {
-    override val root =  vbox {
+class TopView() : View("My View") {
+   override val root  =  vbox {
         alignment = Pos.CENTER
         spacing = 10.0
         val labelText = SimpleStringProperty()
@@ -22,6 +23,5 @@ class TopView : View("My View") {
                 labelText.set("Hello")
             }
         }
-
     }
 }
