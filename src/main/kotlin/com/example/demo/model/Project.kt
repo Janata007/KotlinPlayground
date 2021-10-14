@@ -1,4 +1,4 @@
 package com.example.demo.model
 
-class Projects (){
+class Project (val id: Int, val projectName: String, val subject: String){
 }

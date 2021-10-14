@@ -2,6 +2,7 @@ package com.example.demo.view
 
 import com.example.demo.app.Styles
 import com.example.demo.controller.MyController
+import com.example.demo.style.MyStyle
 import javafx.beans.property.SimpleStringProperty
 import javafx.geometry.Pos
 import tornadofx.*
@@ -17,6 +18,7 @@ val input = SimpleStringProperty()
                textfield(input)
            }
            button("Commit"){
+               addClass(MyStyle.tackyButton)
                action{
 
                        controller.writeToDb(input.value)

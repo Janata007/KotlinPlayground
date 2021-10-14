@@ -1,10 +1,11 @@
 package com.example.demo.app
 
+import com.example.demo.style.MyStyle
 import com.example.demo.view.MainView
 import javafx.stage.Stage
 import tornadofx.App
 
-class MyApp: App(MainView::class, Styles::class){
+class MyApp: App(MainView::class, Styles::class, MyStyle::class){
     override fun start(stage: Stage){
         with(stage) {
             width = 900.0
